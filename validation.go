@@ -8,7 +8,7 @@ import (
 )
 
 // validateRequest memvalidasi struct request dan mengembalikan error jika ada
-func validateRequest(req interface{}) error {
+func ValidateRequest(req interface{}) error {
 	var validate = validator.New()
 	if err := validate.Struct(req); err != nil {
 		var errorMessages []string
